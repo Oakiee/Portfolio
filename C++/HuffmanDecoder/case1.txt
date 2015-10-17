@@ -1,0 +1,24 @@
+# this is a comment. isn’t it insightful?
+# another comment # this is part of the same comment
+# this file describes a tree with 9 nodes 
+9
+# no node descriptions yet
+# 
+MESSAGE 0011011
+# no node yet
+NODE left
+LEFT_CHILD leaf
+RIGHT_CHILD middle
+NODE root
+LEFT_CHILD left
+# nodes don’t have to have both a left and right child 
+NODE middle
+RIGHT_CHILD right
+# left child doesn’t have to come first, either 
+LEFT_CHILD A
+NODE leaf
+RIGHT_CHILD node
+NODE A
+RIGHT_CHILD B
+NODE node
+RIGHT_CHILD C

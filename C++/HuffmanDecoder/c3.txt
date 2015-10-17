@@ -1,0 +1,27 @@
+# Example Tree for prog3
+# This example tree is correct
+# Can you figure out the message by hand?
+# 
+13
+# Message comes next
+MESSAGE 01100110011111000010011111000010111000010011
+#Now for tree description
+NODE A
+LEFT_CHILD B
+RIGHT_CHILD C
+NODE B
+LEFT_CHILD D
+RIGHT_CHILD E
+NODE D
+LEFT_CHILD b
+RIGHT_CHILD e
+NODE E
+LEFT_CHILD i
+RIGHT_CHILD t
+NODE C
+LEFT_CHILD s
+RIGHT_CHILD F
+NODE F
+LEFT_CHILD c
+RIGHT_CHILD  
+
