@@ -1,0 +1,61 @@
+# This is an example of a correct graph file
+# Written by Prof. Chelberg
+# last-modified: Thu Mar 27 11:02:53 2014
+#
+# It is an example of the generality of the file format.
+# This file is not necessarily a good example to test any particular
+# code, other than code to read in such a file.
+#
+# First comes the type of file
+directed
+# Vertices
+# First how many?
+5
+# Then comes the description of the vertices
+# <string description of vertex>
+This is the first node in my graph.
+The vertices do not need to come in any particular order
+# I can embed comments anywhere
+#
+# If a vertex is mentioned more than once, then the graph file is in
+# error.
+A
+23
+I can have a vertex with a name any length I want, including a very very long name that might wrap around $
+# Edges
+# How many?
+7
+# Now the edges in the following format:
+# <from>
+# <to>
+# (<weight>)
+# Note that the weight is optional, and defaults to 1.
+This is the first node in my graph.
+The vertices do not need to come in any particular order
+# notice there may be whitespace in front of the weight.
+ 23.3
+This is the first node in my graph.
+A
+12
+This is the first node in my graph.
+23
+19232.2321
+The vertices do not need to come in any particular order
+I can have a vertex with a name any length I want, including a very very long name that might wrap around $
+
+# Negative weights are ok for the file format, they may or may not be
+# ok for your particular application.
+A
+23
+-1
+# Zero weights are also ok.
+# As are loops or parallel edges.  For your particular application
+# You may not want them, but that doesn't mean the graph format
+# shouldn't allow them.
+23
+23
+0 
+23    
+A 
+
+

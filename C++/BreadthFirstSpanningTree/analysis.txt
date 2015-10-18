@@ -1,0 +1,56 @@
+Amanda Oyakawa
+p001254073
+ao441309@ohio.edu
+Project 4
+
+DESIGN DECISIONS:
+   I decided to set this graph up as a dynamic array of a struct called Vertex. This struct contained its own dynamic arrays of both the names of the vertices it is connected to and the edge lengths between them, with corresponding indexes. I decided to do this because we had to represent it as an adjacency list and it therefore made sense to do it as a list. So as to not get lost in an array full of vertices that had arrays full of vertices themselves. since it only stores a string, I had to search for it, but it made referencing a lot easier. 
+
+I also decided that as I'm reading in the graph if there is more than one edge between vertices, it only keeps the smaller one. For the purpose of this assignment, we only want the smaller one. For a basic graph-reading-in function, this feature should be taken out though. 
+
+
+SPACE/TIME COMPLEXITIES:
+	
+    N = the number of items in the graph
+
+   generate_graph(istream& input):
+ 	space: N 
+	
+	time:BigO(n^2)
+
+   bfs():
+	space: N 
+	
+	time: BigO(n^2)
+
+
+
+CASES:
+
+   case1.txt (with start1.txt): invalid
+				0 vertices, so no spanning tree
+
+   case2.txt (with start2.txt): invalid
+				1 vertex graph- valid file but no spanning tree
+
+   case3.txt (with start3.txt): valid
+				undirected
+				has negative edge lengths
+				has a '\n' as a vertex identifier
+				contains more edges than vertices
+				has a 0 as an edge length
+
+   case4.txt (with start4.txt): valid
+				undirected
+				white space in front of an edge's weight
+				comment lines at the end of the first file
+				extra lines at the end of the second file -stops reading so ok
+				strongly connected - cycle
+
+   case5.txt (with start5.txt): invalid
+				valid file but no spanning tree
+				strongly connected component with one vertex by itself
+				Paprika isn't a Spice Girl^
+	
+
+

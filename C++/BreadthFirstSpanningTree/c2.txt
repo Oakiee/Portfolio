@@ -1,0 +1,12 @@
+undirected
+3
+Chicago
+Vertex A
+San Francisco is my favorite Town
+2
+Chicago
+Vertex A
+
+Vertex A
+Chicago
+3.0

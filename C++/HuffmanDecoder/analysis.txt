@@ -1,0 +1,54 @@
+Amanda Oyakawa
+Project 3
+
+******* For old functions from previous project (previous analysis.txt) ************************
+
+For this program I have decided to go with a Tree class that is organized by an array. Given that the user doesn't have to input nodes with their children in order, this makes it easier to search for a pre-existing node and to do any traversals. 
+
+I decided to use stack for the pre-order function because that way you don't lose track of any nodes when traversing the tree
+
+I used a stack in the degree function also because I used the pre-order function with a degree count where the cout statement is in the pre-order function. 
+
+Functions' space time complexities: (n = number of items in list) 
+
+  generate_tree: Big O(n)
+
+  find_root: Big O(n)
+
+  preorder: Big O(n)
+
+  degrees: Big (n^2)
+
+***********************************************************************************
+
+*********** the new stuff starts here **************************************
+
+For this program I wrote two new functions, check_degrees() and decode(). check_degrees is to used to determine if it is an invalid binary tree for Huffman code standards, by determining if there are any nodes that only have 2 children, with the exception of a 2 node tree. I used the code from my preorder traversal to check each node. 
+
+For the decode I decided to have it simply traverse the tree according to the 0 (left) or 1 (right) input, and then adding the any string belonging to any leaf reached to the decoded message string to print out at the end. catches any errors if it tries to traverse off the tree, or if it ends on something that isn't a leaf, or if there is something in the message that isn't a 0 or a 1
+
+
+Space and time complexities: (n = number of items in list)
+
+check_degrees():  Space Complexity: N * 2
+      
+                  Time Complexity: Big O(n^2)
+
+decode():  Space Complexity: N * 2
+      
+          Time Complexity: Big O(n)
+
+
+Cases: (1 - 4 given to us, the rest are my own)
+  case1 - invalid because of tree
+  case2 - valid
+  case3 - valid
+  case4 - valid, same message as 3
+  case5 - valid, 2 node tree, prints out *****
+  case6 - valid, prints out "consult the helix" 
+  case7 - valid, empty tree
+  case8 - invalid, has extra 0's and doesn't end on a leaf
+  case9 - invalid, 2 node tree with a root and a left_child but tries to go right (1) with message
+  case10 - invalid, has a message containing a character other than a 0 or 1. 
+
+

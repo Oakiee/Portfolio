@@ -1,0 +1,25 @@
+# This is a comment
+#This is a sample graph file
+undirected
+4
+Vertex A
+#The order of vertices doesn't matter
+Vertex C
+Vertex B
+Vertex D
+#Now the number of edges
+4
+Vertex A
+Vertex B
+2
+#Now for the description of the second edge
+Vertex B
+Vertex A
+
+#blank line means default weight == 1
+Vertex A
+Vertex C
+3
+Vertex C
+Vertex D
+1.5
