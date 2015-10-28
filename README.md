@@ -1,7 +1,7 @@
 # Portfolio Projects Overview
 See the Project Folders' README files for more information.
 
-# C \#
+## C-Sharp
 Flooring Project - 9/25/15 
 
 Console Application developed in Visual Studio | Repository Design Pattern | File I/O 
@@ -10,7 +10,7 @@ Simulated a flooring company's program that logged and edited orders.
 
 
 
-# C++
+## C++
 Breadth First Spanning Tree - 3/26/14 
 
 Developed with Gedit IDE | File Input, Console Output 
