@@ -1,10 +1,15 @@
 #Flooring Project
 
 Flooring Project
+
 Written by Andy Forthofer and Amanda Oyakawa
+
 9/25/15
+
 C# console application created in Visual Studio
+
 Repository Design Pattern
+
 
 This project entailed reading and writing from order files, distinguished by filenames according to the date of the order. 
 

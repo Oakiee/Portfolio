@@ -1,0 +1,89 @@
+﻿@model CapstoneBlog.Models.PostVM
+@{
+    ViewBag.Title = "CreatePost";
+}
+
+<h2>Create Post</h2>
+
+<form action="@Url.Action("CreatePostResult")" method="POST">
+
+
+    <div class="row">
+            <div class="col-lg-4">
+                <label>Title</label>@Html.ValidationMessageFor(t => t.Post.PostTitle)
+                @Html.TextBoxFor(m => m.Post.PostTitle, new {@class = "form-control", @placeholder = "Title Here" })
+            </div>
+            <div class="col-lg-4">
+                <label>Type</label>
+                <br/>
+
+                <div>
+                    <label class="radio-inline">Post</label>
+                    @Html.RadioButtonFor(m => m.Post.StaticPageId, 1, new {Checked = "checked"})
+
+                    <label class="radio-inline">Page</label>
+                    @Html.RadioButtonFor(m => m.Post.StaticPageId, 2)
+                </div>
+
+</div>
+            <div class="col-lg-4">
+                <label>Status</label>
+                @Html.DropDownListFor(m => m.Post.StatusId, Model.StatusSelectList, new { @class = "form-control" })
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <label>Body</label>@Html.ValidationMessageFor(t => t.Post.PostContent)
+            @Html.TextAreaFor(m => m.Post.PostContent, new { @class = "form-control", @placeholder = "Type stuff Here" })
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Post.Category)
+                @Html.EditorFor(m => m.Post.Category.CategoryName, new { htmlAttributes = new { @class = "form-control", @name = "cat", @list = "cat" } })
+                @*<input type="text" name="cat" list="cat" id ="@p." class = "form-control text-box single-line" />*@
+                <datalist name="cat" id="cat">
+                    @{
+
+                        List<string> cats = new List<string>();
+                        foreach (var c in Model.Categories)
+                        {
+                            if (cats.Contains(c.CategoryName))
+                            {
+                                continue;
+                            }
+                            else
+                            {
+                                <option value="@c.CategoryName">@c.CategoryName</option>
+                            }
+                            cats.Add(c.CategoryName);
+                            
+                        }
+                    }
+
+                </datalist>
+
+                @*@Html.DropDownListFor(m => m.Category, Model.CategorySelectList, "-- select category --", new { htmlAttributes = new { @class = "form-control" } })*@
+            </div>         
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-8">
+                <div class="form-group">
+                    <lable>Tags</lable>
+                    @Html.TextBoxFor(m => m.TagsWritten, new { @class = "form-control", @placeholder = "#Tag #AnotherTag" })
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+
+
+</form>
