@@ -21,4 +21,5 @@ The user was able to do the following:
 	- Remove an order
 	
 This project utilized the Repository Design Pattern and as such featured a Data layer consisting of repos, a BLL layer consisting of 
-managers and a UI layer consisting of menus and workflows. 
+managers and a UI layer consisting of menus and workflows. It also had a Test layer to test the OrderRepo and OrderManager class functions. 
+The OrderRepo tests featured a test set-up and test tear-down. 
